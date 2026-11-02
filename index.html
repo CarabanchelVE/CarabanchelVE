@@ -1,42 +1,318 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My New Website</title>
+
+    <title>Mesa Bolívar | Venezuela</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5e3c8;
+            color: #633817;
+        }
+
+        /* HEADER */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 5%;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 38px;
+            font-weight: bold;
+            font-style: italic;
+            color: #633817;
+        }
+
+        .logo span {
+            display: block;
+            font-size: 17px;
+            text-align: center;
+            font-style: normal;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #633817;
+            font-weight: bold;
+            padding: 12px 22px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #633817;
+            color: white;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            margin: 10px 3%;
+            height: 340px;
+            border-radius: 18px;
+            background:
+                linear-gradient(rgba(0,0,0,0.15),
+                rgba(0,0,0,0.15)),
+                url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b")
+                center 50% / cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 55px;
+            text-shadow: 2px 2px 8px #333;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-top: 12px;
+            text-shadow: 2px 2px 5px #333;
+        }
+
+        /* LOCATION SECTION */
+
+        .location {
+            padding: 45px 7%;
+            text-align: center;
+        }
+
+        .location h2 {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .location p {
+            font-size: 19px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .map-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 18px;
+            box-shadow: 0 5px 15px rgba(70, 40, 15, 0.2);
+        }
+
+        iframe {
+            width: 100%;
+            height: 430px;
+            border: 0;
+            display: block;
+        }
+
+        /* MAP BUTTON */
+
+        .map-button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 16px 30px;
+            background: #633817;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .map-button:hover {
+            background: #8b572d;
+            transform: translateY(-3px);
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px 15px;
+            background: #e8c99f;
+            color: #633817;
+            margin-top: 35px;
+        }
+
+        footer h2 {
+            font-family: Georgia, serif;
+            font-style: italic;
+            font-size: 28px;
+        }
+
+        footer p {
+            margin-top: 12px;
+        }
+
+        /* MOBILE DESIGN */
+
+        @media (max-width: 700px) {
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 30px;
+            }
+
+            nav {
+                justify-content: center;
+                gap: 5px;
+            }
+
+            nav a {
+                padding: 9px 12px;
+                font-size: 14px;
+            }
+
+            .hero {
+                height: 250px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .location h2 {
+                font-size: 27px;
+            }
+
+            .location p {
+                font-size: 16px;
+            }
+
+            iframe {
+                height: 330px;
+            }
+        }
+
+    </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Website!</h1>
-    <p>This is my first website created with GitHub Pages.</p>
-    
-<section style="padding: 40px 20px; text-align: center;">
+    <!-- HEADER -->
 
-    <h2>Find Mesa Bolívar</h2>
+    <header>
 
-    <p>
-        Municipio Antonio Pinto Salinas,
-        Estado Mérida, Venezuela.
-    </p>
+        <div class="logo">
+            Mesa Bolívar
+            <span>Venezuela</span>
+        </div>
 
-    <iframe
-        src="https://www.google.com/maps?q=8.47588,-71.59779&output=embed"
-        width="100%"
-        height="400"
-        style="border:0; border-radius:12px;"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#location">Location</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    <p>
-        <a href="https://www.google.com/maps?q=8.47588,-71.59779"
-           target="_blank">
-            Open in Google Maps
+    </header>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div>
+            <h1>Mesa Bolívar</h1>
+            <p>A beautiful place in the Venezuelan Andes</p>
+        </div>
+
+    </section>
+
+
+    <!-- LOCATION AND MAP -->
+
+    <section class="location" id="location">
+
+        <h2>📍 Find Mesa Bolívar</h2>
+
+        <p>
+            Municipio Antonio Pinto Salinas,
+            Estado Mérida, Venezuela.
+        </p>
+
+        <div class="map-container">
+
+            <iframe
+                src="https://maps.google.com/maps?q=Mesa%20Bolivar%2C%20Merida%2C%20Venezuela&output=embed"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
+
+        </div>
+
+        <a
+            class="map-button"
+            href="https://www.google.com/maps/search/?api=1&query=Mesa+Bolivar+Merida+Venezuela"
+            target="_blank">
+
+            📍 Open in Google Maps
+
         </a>
-    </p>
 
-</section>
+    </section>
+
+
+    <!-- GALLERY PLACEHOLDER -->
+
+    <section class="location" id="gallery">
+
+        <h2>Discover Our Home</h2>
+
+        <p>
+            Explore the beauty, nature and traditions
+            of Mesa Bolívar.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+        <h2>Our Home, Our Roots</h2>
+
+        <p>Mesa Bolívar, Mérida, Venezuela</p>
+
+        <p>© 2026 Mesa Bolívar. All rights reserved.</p>
+
+    </footer>
 
 </body>
 </html>
